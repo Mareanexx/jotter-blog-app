@@ -32,8 +32,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import ru.mareanexx.core.ui.theme.LightGray
-import ru.mareanexx.core.ui.theme.Shapes
+import ru.mareanexx.common.ui.theme.LightGray
+import ru.mareanexx.common.ui.theme.Shapes
 import ru.mareanexx.feature_auth.R
 
 @Composable
@@ -58,8 +58,8 @@ fun CustomAuthTextField(
         Row(
             modifier = Modifier.fillMaxWidth()
                 .background(
-                    color = if (!isError) LightGray.copy(alpha = 0.15f) else MaterialTheme.colorScheme.error,
-                    shape = Shapes.medium
+                    color = if (!isError) ru.mareanexx.common.ui.theme.LightGray.copy(alpha = 0.15f) else MaterialTheme.colorScheme.error,
+                    shape = ru.mareanexx.common.ui.theme.Shapes.medium
                 )
                 .padding(horizontal = 20.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,

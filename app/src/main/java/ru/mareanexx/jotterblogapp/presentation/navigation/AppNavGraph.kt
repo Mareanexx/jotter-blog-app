@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import ru.mareanexx.core.navigation.NavRoute
+import ru.mareanexx.common.ui.navigation.NavRoute
 import ru.mareanexx.feature_auth.presentation.screen.login.LoginScreen
 import ru.mareanexx.feature_auth.presentation.screen.register.RegisterScreen
 import ru.mareanexx.feature_auth.presentation.screen.start.StartScreen

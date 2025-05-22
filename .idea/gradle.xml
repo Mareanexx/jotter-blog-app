@@ -24,7 +24,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common" />
+            <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/feature-auth" />
+            <option value="$PROJECT_DIR$/feature-settings" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

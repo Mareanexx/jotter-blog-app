@@ -17,5 +17,8 @@ rootProject.name = "JotterBlogApp"
 include(
     ":app",
     ":core",
-    ":feature-auth"
+    ":core:data",
+    ":core:common",
+    ":feature-auth",
+    ":feature-settings"
 )

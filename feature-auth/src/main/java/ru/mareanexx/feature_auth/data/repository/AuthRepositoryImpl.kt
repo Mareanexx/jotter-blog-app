@@ -2,9 +2,9 @@ package ru.mareanexx.feature_auth.data.repository
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import ru.mareanexx.core.data.common.BaseResult
-import ru.mareanexx.core.data.common.Error
-import ru.mareanexx.core.utils.UserSessionManager
+import ru.mareanexx.common.data.remote.common.BaseResult
+import ru.mareanexx.common.data.remote.common.Error
+import ru.mareanexx.common.utils.UserSessionManager
 import ru.mareanexx.feature_auth.data.remote.api.AuthApi
 import ru.mareanexx.feature_auth.data.remote.dto.LoginRequest
 import ru.mareanexx.feature_auth.data.remote.dto.RegisterRequest

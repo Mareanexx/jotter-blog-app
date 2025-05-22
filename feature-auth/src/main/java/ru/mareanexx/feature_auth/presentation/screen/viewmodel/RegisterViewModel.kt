@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
-import ru.mareanexx.core.data.common.BaseResult
+import ru.mareanexx.common.data.remote.common.BaseResult
 import ru.mareanexx.feature_auth.data.mapper.toRequest
 import ru.mareanexx.feature_auth.domain.usecase.RegisterUseCase
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.event.RegistrationEvent

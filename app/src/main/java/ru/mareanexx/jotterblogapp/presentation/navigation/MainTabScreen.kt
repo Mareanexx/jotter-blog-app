@@ -18,17 +18,17 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ru.mareanexx.core.ui.bottombar.BottomNavBar
-import ru.mareanexx.core.ui.bottombar.Tabs
-import ru.mareanexx.core.ui.bottombar.Tabs.Collections
-import ru.mareanexx.core.ui.bottombar.Tabs.Home
-import ru.mareanexx.core.ui.bottombar.Tabs.Notifications
-import ru.mareanexx.core.ui.bottombar.Tabs.Settings
+import ru.mareanexx.common.ui.bottombar.BottomNavBar
+import ru.mareanexx.common.ui.bottombar.Tabs
+import ru.mareanexx.common.ui.bottombar.Tabs.Collections
+import ru.mareanexx.common.ui.bottombar.Tabs.Home
+import ru.mareanexx.common.ui.bottombar.Tabs.Notifications
+import ru.mareanexx.common.ui.bottombar.Tabs.Settings
 
 
 @Composable
 fun MainTabScreen(rootNavController: NavHostController) {
-    val navItems: List<Tabs> = listOf(Home, Collections, Notifications, Settings)
+    val navItems: List<ru.mareanexx.common.ui.bottombar.Tabs> = listOf(Home, Collections, Notifications, Settings)
     var selectedTab by rememberSaveable { mutableStateOf(Home) }
     var showBottomNavBar by remember { mutableStateOf(true) }
 
@@ -48,7 +48,7 @@ fun MainTabScreen(rootNavController: NavHostController) {
         containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
             if (showBottomNavBar) {
-                BottomNavBar(
+                ru.mareanexx.common.ui.bottombar.BottomNavBar(
                     selectedTab = selectedTab,
                     onTabSelected = { selectedTab = it }
                 )

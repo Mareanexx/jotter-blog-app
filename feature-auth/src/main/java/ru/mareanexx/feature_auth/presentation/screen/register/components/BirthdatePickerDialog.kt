@@ -30,8 +30,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import ru.mareanexx.core.ui.theme.LightGray
-import ru.mareanexx.core.ui.theme.Shapes
+import ru.mareanexx.common.ui.theme.LightGray
+import ru.mareanexx.common.ui.theme.Shapes
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.form.RegisterForm
 import java.time.Instant
@@ -116,7 +116,7 @@ fun BirthDateOneComponent(
 ) {
     Box(
         modifier = weightModifier
-            .background(LightGray.copy(alpha = 0.15f), shape = Shapes.medium)
+            .background(ru.mareanexx.common.ui.theme.LightGray.copy(alpha = 0.15f), shape = ru.mareanexx.common.ui.theme.Shapes.medium)
             .clickable { onOpenDatePicker() }
             .padding(horizontal = 15.dp, vertical = 15.dp),
         contentAlignment = Alignment.Center

@@ -6,7 +6,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":core"))
+    implementation(project(":core:common"))
     implementation(project(":feature-auth"))
 
     ksp(libs.androidx.room.compiler)

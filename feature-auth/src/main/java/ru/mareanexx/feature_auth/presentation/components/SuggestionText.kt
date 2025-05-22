@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ru.mareanexx.core.ui.theme.DarkGray
+import ru.mareanexx.common.ui.theme.DarkGray
 
 @Composable
 fun AuthBottomSuggestionText(
@@ -25,7 +25,7 @@ fun AuthBottomSuggestionText(
     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
         Text(
             style = MaterialTheme.typography.labelSmall.copy(fontSize = 13.sp),
-            text = stringResource(first), color = DarkGray
+            text = stringResource(first), color = ru.mareanexx.common.ui.theme.DarkGray
         )
         Spacer(modifier = Modifier.width(5.dp))
         Text(

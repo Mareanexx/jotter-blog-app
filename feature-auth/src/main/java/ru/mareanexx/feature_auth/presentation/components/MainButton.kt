@@ -16,8 +16,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ru.mareanexx.core.ui.theme.LightBlue
-import ru.mareanexx.core.ui.theme.Shapes
+import ru.mareanexx.common.ui.theme.LightBlue
+import ru.mareanexx.common.ui.theme.Shapes
 
 @Composable
 fun CustomMainButton(
@@ -31,7 +31,7 @@ fun CustomMainButton(
     val buttonModifier = if (isShadowed) Modifier.fillMaxWidth().addBlueShadow() else Modifier.fillMaxWidth()
 
     Button(
-        shape = Shapes.extraLarge,
+        shape = ru.mareanexx.common.ui.theme.Shapes.extraLarge,
         modifier = buttonModifier,
         onClick = onAuthClicked,
         colors = ButtonDefaults.buttonColors(containerColor = containerColor),
@@ -48,4 +48,4 @@ fun CustomMainButton(
     }
 }
 
-fun Modifier.addBlueShadow() = shadow(elevation = 15.dp, shape = Shapes.extraLarge, ambientColor = LightBlue, spotColor = LightBlue)
+fun Modifier.addBlueShadow() = shadow(elevation = 15.dp, shape = ru.mareanexx.common.ui.theme.Shapes.extraLarge, ambientColor = ru.mareanexx.common.ui.theme.LightBlue, spotColor = ru.mareanexx.common.ui.theme.LightBlue)

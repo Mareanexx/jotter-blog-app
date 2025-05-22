@@ -21,7 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ru.mareanexx.core.ui.theme.Shapes
+import ru.mareanexx.common.ui.theme.Shapes
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
 
@@ -38,7 +38,7 @@ fun StartScreen(onNavigateToLoginScreen: () -> Unit, onNavigateToRegisterScreen:
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                modifier = Modifier.size(150.dp).clip(Shapes.extraLarge),
+                modifier = Modifier.size(150.dp).clip(ru.mareanexx.common.ui.theme.Shapes.extraLarge),
                 painter = painterResource(R.drawable.jotter_app_icon),
                 contentDescription = stringResource(R.string.main_app_icon)
             )

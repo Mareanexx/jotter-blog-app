@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import ru.mareanexx.core.ui.theme.Shapes
+import ru.mareanexx.common.ui.theme.Shapes
 import ru.mareanexx.feature_auth.R
 
 @Composable
@@ -19,7 +19,7 @@ fun NavigateBackButton(onNavigateBack: () -> Unit) {
     Button(
         modifier = Modifier.size(38.dp),
         contentPadding = PaddingValues(horizontal = 0.dp),
-        shape = Shapes.small,
+        shape = ru.mareanexx.common.ui.theme.Shapes.small,
         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary),
         onClick = onNavigateBack
     ) {

@@ -1,7 +1,9 @@
 import config.BuildConfigConsts
 import config.baseAndroidConfig
 import config.libs
+import gradle.kotlin.dsl.accessors._c0ebf38a9e0e766e40379ba7eaa32ea4.androidTestImplementation
 import gradle.kotlin.dsl.accessors._c0ebf38a9e0e766e40379ba7eaa32ea4.implementation
+import gradle.kotlin.dsl.accessors._c0ebf38a9e0e766e40379ba7eaa32ea4.testImplementation
 
 plugins {
     id("com.android.library")
@@ -9,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.mareanexx.core"
+    namespace = "ru.mareanexx.core.common"
     baseAndroidConfig()
 
     defaultConfig {
@@ -46,4 +48,6 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
 
     debugImplementation(libs.androidx.ui.tooling)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
 }

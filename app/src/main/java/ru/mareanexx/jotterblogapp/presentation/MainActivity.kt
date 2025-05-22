@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import ru.mareanexx.core.ui.theme.JotterBlogAppTheme
+import ru.mareanexx.common.ui.theme.JotterBlogAppTheme
 import ru.mareanexx.jotterblogapp.presentation.navigation.AppNavGraph
 
 @AndroidEntryPoint
@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContent {
-            JotterBlogAppTheme {
+            ru.mareanexx.common.ui.theme.JotterBlogAppTheme {
                 val navHostController = rememberNavController()
                 AppNavGraph(navHostController)
             }

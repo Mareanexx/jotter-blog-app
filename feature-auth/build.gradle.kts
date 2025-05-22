@@ -9,6 +9,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
+    implementation(project(":core:common"))
     ksp(libs.hilt.compiler)
 }
