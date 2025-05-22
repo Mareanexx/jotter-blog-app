@@ -1,3 +1,40 @@
 <resources>
-    <string name="app_name">feature-auth</string>
+    <!--Commons-->
+    <string name="start_screen_description">There things happen.</string>
+    <string name="navigate_back_dsc">Button to navigate back to previous screen</string>
+    <string name="empty_string" />
+    <string name="main_app_icon">Main app icon</string>
+    <string name="ok_btn">OK</string>
+    <string name="cancel_btn">Cancel</string>
+
+    <!--Login Screen-->
+    <string name="log_in_lbl">Log in</string>
+    <string name="incorrect_credentials">Email or password are incorrect</string>
+    <string name="log_in_description">Let\'s log into your account and roll in to Jotter!</string>
+    <string name="new_user_log">New to Jotter? Then </string>
+
+    <!--Register Screen-->
+    <string name="sign_up_lbl">Sign up</string>
+    <string name="sign_up_description">It\'s never late to join Jotter, we welcome you!</string>
+    <string name="already_registered">Already registered? Then </string>
+
+    <!--Auth TextFields-->
+    <string name="tf_label_email">Email address</string>
+    <string name="tf_placeholder_email">Enter your email address</string>
+    <string name="tf_label_password">Password</string>
+    <string name="tf_placeholder_password">Enter password</string>
+    <string name="tf_label_username">Username</string>
+    <string name="tf_placeholder_username">Enter username</string>
+    <string name="tf_label_confirm_password">Confirm password</string>
+    <string name="tf_placeholder_confirm_password">Enter password again</string>
+    <string name="tf_label_birthdate">Birthdate (Optional)</string>
+    <string name="f_placeholder_day">Day</string>
+    <string name="f_placeholder_month">Month</string>
+    <string name="f_placeholder_year">Year</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_username_too_short">Username must be at least 3 chars long</string>
+    <string name="error_password_too_short">Password must be at least 6 chars long</string>
+    <string name="error_confirm_password_not_same">Confirm password is not the same</string>
+    <string name="error_email_already_registered">User with such email is already registered</string>
+    <string name="select_birth_date">Select birthDate</string>
 </resources>
