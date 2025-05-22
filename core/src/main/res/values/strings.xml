@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_new_article">Add new article</string>
+    <string name="nav_route_home">Navigation route home</string>
+    <string name="nav_route_collections">Navigation route collections</string>
+    <string name="nav_route_notifications">Navigation route notifications</string>
+    <string name="nav_route_settings">Navigation route settings</string>
+</resources>

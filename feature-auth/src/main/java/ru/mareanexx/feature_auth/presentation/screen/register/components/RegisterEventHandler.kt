@@ -7,7 +7,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.flow.SharedFlow
-import ru.mareanexx.feature_auth.presentation.screen.register.BirthDatePickerDialog
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.event.RegistrationEvent
 
 @Composable

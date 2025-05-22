@@ -2,7 +2,6 @@ package ru.mareanexx.jotterblogapp.presentation.navigation
 
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -16,7 +15,7 @@ import ru.mareanexx.feature_auth.presentation.screen.start.StartScreen
 fun AppNavGraph(navHostController: NavHostController) {
     NavHost(
         navController = navHostController,
-        startDestination = NavRoute.Start.route
+        startDestination = NavRoute.Main.route
     ) {
         composable(
             route = NavRoute.Start.route,
@@ -50,8 +49,8 @@ fun AppNavGraph(navHostController: NavHostController) {
                 }
             )
         }
-        composable(route = "main") {
-            Text(text = "MArianna PRofile screen")
+        composable(route = NavRoute.Main.route) {
+            MainTabScreen(navHostController)
         }
     }
 }
