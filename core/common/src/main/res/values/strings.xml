@@ -5,4 +5,5 @@
     <string name="nav_route_collections">Navigation route collections</string>
     <string name="nav_route_notifications">Navigation route notifications</string>
     <string name="nav_route_settings">Navigation route settings</string>
+    <string name="navigate_back_dsc">Navigate to previous screen</string>
 </resources>

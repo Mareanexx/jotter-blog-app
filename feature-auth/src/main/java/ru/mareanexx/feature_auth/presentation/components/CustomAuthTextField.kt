@@ -58,8 +58,8 @@ fun CustomAuthTextField(
         Row(
             modifier = Modifier.fillMaxWidth()
                 .background(
-                    color = if (!isError) ru.mareanexx.common.ui.theme.LightGray.copy(alpha = 0.15f) else MaterialTheme.colorScheme.error,
-                    shape = ru.mareanexx.common.ui.theme.Shapes.medium
+                    color = if (!isError) LightGray.copy(alpha = 0.15f) else MaterialTheme.colorScheme.error,
+                    shape = Shapes.medium
                 )
                 .padding(horizontal = 20.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -68,7 +68,7 @@ fun CustomAuthTextField(
             Icon(
                 modifier = Modifier.size(30.dp),
                 painter = painterResource(icon),
-                tint = if (!isError) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onError,
+                tint = if (!isError) MaterialTheme.colorScheme.surfaceBright else MaterialTheme.colorScheme.onError,
                 contentDescription = stringResource(placeholder)
             )
             BasicTextField(
@@ -79,7 +79,7 @@ fun CustomAuthTextField(
                 keyboardOptions = KeyboardOptions(imeAction = imeAction, keyboardType = keyboardType),
                 cursorBrush = SolidColor(value = MaterialTheme.colorScheme.onSurface),
                 visualTransformation = if (isPassword && !isPasswordVisible) PasswordVisualTransformation() else VisualTransformation.None,
-                textStyle = MaterialTheme.typography.bodyLarge.copy(color = if (!isError) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onError),
+                textStyle = MaterialTheme.typography.bodyLarge.copy(color = if (!isError) MaterialTheme.colorScheme.surfaceBright else MaterialTheme.colorScheme.onError),
                 decorationBox = { innerTextField ->
                     Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.CenterStart) {
                         if (value.isEmpty()) {
@@ -101,7 +101,7 @@ fun CustomAuthTextField(
                         indication = null
                     ) { isPasswordVisible = !isPasswordVisible },
                     painter = painterResource(visibilityIconRes),
-                    tint = MaterialTheme.colorScheme.onSurface,
+                    tint = MaterialTheme.colorScheme.surfaceBright,
                     contentDescription = null
                 )
             }

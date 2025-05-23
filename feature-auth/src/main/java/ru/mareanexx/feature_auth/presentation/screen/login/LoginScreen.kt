@@ -16,9 +16,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import ru.mareanexx.common.ui.common.components.AuthScreenHeader
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.AuthBottomSuggestionText
-import ru.mareanexx.feature_auth.presentation.components.AuthScreenHeader
 import ru.mareanexx.feature_auth.presentation.components.CustomAuthTextField
 import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
 import ru.mareanexx.feature_auth.presentation.screen.login.components.LoginEventHandler
