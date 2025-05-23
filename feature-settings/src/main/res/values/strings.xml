@@ -1,0 +1,18 @@
+<resources>
+    <!--Common-->
+    <string name="settings_title">Settings</string>
+    <string name="settings_description">Customize Jotter the way you want.</string>
+
+    <!--Profile Settings-->
+    <string name="profile_settings_lbl">Profile</string>
+    <string name="profile_settings_desc">Manage your profile settings</string>
+
+    <!--Other Settings-->
+    <string name="other_settings_lbl">Other Settings</string>
+    <string name="other_settings_desc">Set notifications. Customize the app etc.</string>
+    <string name="receive_notifications">Receive Notifications</string>
+    <string name="receive_notifications_description">Receive notifications on a new articles</string>
+    <string name="app_theme_set_title">App theme</string>
+    <string name="light_theme_lbl">Light</string>
+    <string name="dark_theme_lbl">Dark</string>
+</resources>

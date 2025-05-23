@@ -17,9 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import ru.mareanexx.common.ui.common.components.AuthScreenHeader
+import ru.mareanexx.common.ui.common.components.CustomTextField
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.AuthBottomSuggestionText
-import ru.mareanexx.feature_auth.presentation.components.CustomAuthTextField
 import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
 import ru.mareanexx.feature_auth.presentation.screen.login.components.LoginEventHandler
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.LoginViewModel
@@ -46,7 +46,7 @@ fun LoginScreen(
         Column(modifier = Modifier.weight(1f)) {
             AuthScreenHeader(R.string.log_in_lbl, R.string.log_in_description, onNavigateBack = onNavigateBack)
 
-            CustomAuthTextField(
+            CustomTextField(
                 value = formState.value.email,
                 onValueChanged = { loginViewModel.onEmailChanged(it) },
                 label = R.string.tf_label_email,
@@ -59,7 +59,7 @@ fun LoginScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            CustomAuthTextField(
+            CustomTextField(
                 value = formState.value.password,
                 onValueChanged = { loginViewModel.onPasswordChanged(it) },
                 label = R.string.tf_label_password,

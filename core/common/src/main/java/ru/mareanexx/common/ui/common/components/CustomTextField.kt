@@ -1,4 +1,4 @@
-package ru.mareanexx.feature_auth.presentation.components
+package ru.mareanexx.common.ui.common.components
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -34,10 +34,10 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import ru.mareanexx.common.ui.theme.LightGray
 import ru.mareanexx.common.ui.theme.Shapes
-import ru.mareanexx.feature_auth.R
+import ru.mareanexx.core.common.R
 
 @Composable
-fun CustomAuthTextField(
+fun CustomTextField(
     value: String,
     onValueChanged: (String) -> Unit,
     @StringRes label: Int,

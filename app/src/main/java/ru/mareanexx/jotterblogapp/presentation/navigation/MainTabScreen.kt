@@ -48,7 +48,7 @@ fun MainTabScreen(rootNavController: NavHostController) {
         containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
             if (showBottomNavBar) {
-                ru.mareanexx.common.ui.bottombar.BottomNavBar(
+                BottomNavBar(
                     selectedTab = selectedTab,
                     onTabSelected = { selectedTab = it }
                 )
@@ -83,7 +83,25 @@ fun MainTabScreen(rootNavController: NavHostController) {
                                 composable(route = Notifications.route) {}
                             }
                             Settings -> {
-                                composable(route = Settings.route) {}
+                                composable(route = Settings.route) {
+                                    SettingsScreen(onNavigateToSettings = { navController.navigate(it.route) })
+                                }
+
+                                composable(
+                                    route = SettingsRoute.Profile.route,
+                                    enterTransition = { slideInHorizontally(initialOffsetX = { -it }) },
+                                    exitTransition = { slideOutHorizontally(targetOffsetX = { -it }) }
+                                ) {
+                                    // TODO()
+                                }
+                                
+                                composable(
+                                    route = SettingsRoute.Others.route,
+                                    enterTransition = { slideInHorizontally(initialOffsetX = { -it }) },
+                                    exitTransition = { slideOutHorizontally(targetOffsetX = { -it }) }
+                                ) {
+                                    OtherSettingsScreen(onNavigateBack = { navController.popBackStack() })
+                                }
                             }
                         }
                     }

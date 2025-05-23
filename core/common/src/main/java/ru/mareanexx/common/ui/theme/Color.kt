@@ -18,7 +18,7 @@ val LightSurfaceContainer = White
 val LightOnBackground = DarkBlue
 val LightSurface = White
 val LightSurfaceBright = DarkGray
-val LightOnSurface = DarkGray
+val LightOnSurface = LightGray
 val LightSecondary = DarkBlue
 val LightOnSecondary = White
 

@@ -17,9 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import ru.mareanexx.common.ui.common.components.AuthScreenHeader
+import ru.mareanexx.common.ui.common.components.CustomTextField
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.AuthBottomSuggestionText
-import ru.mareanexx.feature_auth.presentation.components.CustomAuthTextField
 import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
 import ru.mareanexx.feature_auth.presentation.screen.register.components.BirthDateChooser
 import ru.mareanexx.feature_auth.presentation.screen.register.components.RegistrationEventHandler
@@ -54,12 +54,12 @@ fun RegisterScreen(
         Column(modifier = Modifier.weight(1f)) {
             AuthScreenHeader(R.string.sign_up_lbl, R.string.sign_up_description, onNavigateBack = onNavigateBack)
 
-            CustomAuthTextField(
+            CustomTextField(
                 value = formState.value.username,
                 onValueChanged = { registerViewModel.onUsernameChanged(it) },
                 label = R.string.tf_label_username,
                 placeholder = R.string.tf_placeholder_username,
-                icon = R.drawable.person_icon,
+                icon = ru.mareanexx.core.common.R.drawable.person_icon,
                 isError = usernameError != null,
                 errorRes = usernameError?.message ?: R.string.empty_string,
                 keyboardType = KeyboardType.Text, imeAction = ImeAction.Next
@@ -67,7 +67,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            CustomAuthTextField(
+            CustomTextField(
                 value = formState.value.email,
                 onValueChanged = { registerViewModel.onEmailChanged(it) },
                 label = R.string.tf_label_email,
@@ -80,7 +80,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            CustomAuthTextField(
+            CustomTextField(
                 value = formState.value.password,
                 onValueChanged = { registerViewModel.onPasswordChanged(it) },
                 label = R.string.tf_label_password,
@@ -94,7 +94,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            CustomAuthTextField(
+            CustomTextField(
                 value = formState.value.confirmPassword,
                 onValueChanged = { registerViewModel.onConfirmPasswordChanged(it) },
                 label = R.string.tf_label_confirm_password,
