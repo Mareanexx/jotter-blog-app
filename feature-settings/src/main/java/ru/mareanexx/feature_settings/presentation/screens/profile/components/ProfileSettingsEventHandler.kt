@@ -1,4 +1,4 @@
-package ru.mareanexx.feature_auth.presentation.screen.register.components
+package ru.mareanexx.feature_settings.presentation.screens.profile.components
 
 import android.widget.Toast
 import androidx.compose.runtime.Composable
@@ -8,11 +8,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.flow.SharedFlow
 import ru.mareanexx.common.ui.common.components.BirthDatePickerDialog
-import ru.mareanexx.feature_auth.presentation.screen.viewmodel.event.RegistrationEvent
+import ru.mareanexx.feature_settings.presentation.screens.profile.viewmodel.event.ProfileSettingsEvent
 
 @Composable
-fun RegistrationEventHandler(
-    eventFlow: SharedFlow<RegistrationEvent>,
+fun ProfileSettingsEventHandler(
+    eventFlow: SharedFlow<ProfileSettingsEvent>,
     onBirthDateChanged: (Long) -> Unit
 ) {
     val showDatePicker = remember { mutableStateOf(false) }
@@ -21,10 +21,10 @@ fun RegistrationEventHandler(
     LaunchedEffect(Unit) {
         eventFlow.collect { event ->
             when(event) {
-                RegistrationEvent.ShowDatePicker -> { showDatePicker.value = true }
-                is RegistrationEvent.ShowToast -> {
+                is ProfileSettingsEvent.ShowToast -> {
                     Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
                 }
+                ProfileSettingsEvent.ShowDatePicker -> { showDatePicker.value = true }
             }
         }
     }

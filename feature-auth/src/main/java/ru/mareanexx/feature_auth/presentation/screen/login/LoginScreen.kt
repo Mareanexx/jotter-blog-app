@@ -20,7 +20,7 @@ import ru.mareanexx.common.ui.common.components.AuthScreenHeader
 import ru.mareanexx.common.ui.common.components.CustomTextField
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.AuthBottomSuggestionText
-import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
+import ru.mareanexx.common.ui.common.components.CustomMainButton
 import ru.mareanexx.feature_auth.presentation.screen.login.components.LoginEventHandler
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.LoginViewModel
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.state.LoginUiState

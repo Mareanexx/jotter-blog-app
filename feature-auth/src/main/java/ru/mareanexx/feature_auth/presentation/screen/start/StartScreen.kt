@@ -21,9 +21,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ru.mareanexx.common.ui.theme.Shapes
 import ru.mareanexx.feature_auth.R
-import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
+import ru.mareanexx.common.ui.common.components.CustomMainButton
 
 @Composable
 fun StartScreen(onNavigateToLoginScreen: () -> Unit, onNavigateToRegisterScreen: () -> Unit) {

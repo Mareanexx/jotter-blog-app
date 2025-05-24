@@ -6,6 +6,9 @@
     <!--Profile Settings-->
     <string name="profile_settings_lbl">Profile</string>
     <string name="profile_settings_desc">Manage your profile settings</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_username_too_short">Username must be at least 3 chars long</string>
+    <string name="error_email_already_registered">User with such email is already registered</string>
 
     <!--Other Settings-->
     <string name="other_settings_lbl">Other Settings</string>
@@ -15,4 +18,18 @@
     <string name="app_theme_set_title">App theme</string>
     <string name="light_theme_lbl">Light</string>
     <string name="dark_theme_lbl">Dark</string>
+    <string name="error_bio_too_short">Bio must be at least 3 chars long</string>
+    <string name="user_avatar">User avatar image</string>
+    <string name="edit_profile_avatar">Edit profile avatar</string>
+    <string name="member_since">Member since</string>
+    <string name="tf_label_email">Email address</string>
+    <string name="tf_placeholder_email">Enter email address</string>
+    <string name="empty_string" />
+    <string name="tf_username_label">Username</string>
+    <string name="tf_username_placeholder">Enter username</string>
+    <string name="tf_bio_label">Bio (Optional)</string>
+    <string name="tf_bio_placeholder">Enter personal bio</string>
+    <string name="save">Save</string>
+    <string name="retry">Retry</string>
+    <string name="cant_load_content">Can\'t load content now. Try again or come back later</string>
 </resources>

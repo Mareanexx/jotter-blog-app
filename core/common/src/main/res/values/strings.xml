@@ -6,4 +6,17 @@
     <string name="nav_route_notifications">Navigation route notifications</string>
     <string name="nav_route_settings">Navigation route settings</string>
     <string name="navigate_back_dsc">Navigate to previous screen</string>
+
+    <!--Birthdate DatePicker-->
+    <string name="ok_btn">OK</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="tf_label_birthdate">Birthdate (Optional)</string>
+    <string name="f_placeholder_day">Day</string>
+    <string name="f_placeholder_month">Month</string>
+    <string name="f_placeholder_year">Year</string>
+    <string name="select_birth_date">Select birthDate</string>
+
+    <!--Error Retry-->
+    <string name="retry">Retry</string>
+    <string name="cant_load_content">Can\'t load content now! Retry now or try again later</string>
 </resources>

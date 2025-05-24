@@ -14,6 +14,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import ru.mareanexx.feature_settings.R
 import ru.mareanexx.feature_settings.presentation.components.ConcreteSettingsHeader
 import ru.mareanexx.feature_settings.presentation.screens.other.components.AppThemeToggleable
 import ru.mareanexx.feature_settings.presentation.screens.other.components.OtherSettingSwitchable
@@ -29,7 +30,7 @@ fun OtherSettingsScreen(
     val appSettings = appSettingsViewModel.settings.collectAsState()
 
     Column(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
-        ConcreteSettingsHeader(onNavigateBack)
+        ConcreteSettingsHeader(R.string.other_settings_lbl, onNavigateBack)
 
         Spacer(modifier = Modifier.height(10.dp))
 

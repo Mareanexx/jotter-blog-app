@@ -1,4 +1,4 @@
-package ru.mareanexx.feature_auth.presentation.components
+package ru.mareanexx.common.ui.common.components
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.PaddingValues
@@ -31,7 +31,7 @@ fun CustomMainButton(
     val buttonModifier = if (isShadowed) Modifier.fillMaxWidth().addBlueShadow() else Modifier.fillMaxWidth()
 
     Button(
-        shape = ru.mareanexx.common.ui.theme.Shapes.extraLarge,
+        shape = Shapes.extraLarge,
         modifier = buttonModifier,
         onClick = onAuthClicked,
         colors = ButtonDefaults.buttonColors(containerColor = containerColor),
@@ -48,4 +48,4 @@ fun CustomMainButton(
     }
 }
 
-fun Modifier.addBlueShadow() = shadow(elevation = 15.dp, shape = ru.mareanexx.common.ui.theme.Shapes.extraLarge, ambientColor = ru.mareanexx.common.ui.theme.LightBlue, spotColor = ru.mareanexx.common.ui.theme.LightBlue)
+fun Modifier.addBlueShadow() = shadow(elevation = 15.dp, shape = Shapes.extraLarge, ambientColor = LightBlue, spotColor = LightBlue)

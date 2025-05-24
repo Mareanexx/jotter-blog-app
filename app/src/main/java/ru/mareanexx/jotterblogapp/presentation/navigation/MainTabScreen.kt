@@ -24,6 +24,10 @@ import ru.mareanexx.common.ui.bottombar.Tabs.Collections
 import ru.mareanexx.common.ui.bottombar.Tabs.Home
 import ru.mareanexx.common.ui.bottombar.Tabs.Notifications
 import ru.mareanexx.common.ui.bottombar.Tabs.Settings
+import ru.mareanexx.feature_settings.presentation.screens.other.OtherSettingsScreen
+import ru.mareanexx.feature_settings.presentation.screens.profile.ProfileSettingsScreen
+import ru.mareanexx.feature_settings.presentation.screens.settings.SettingsRoute
+import ru.mareanexx.feature_settings.presentation.screens.settings.SettingsScreen
 
 
 @Composable
@@ -84,6 +88,7 @@ fun MainTabScreen(rootNavController: NavHostController) {
                             }
                             Settings -> {
                                 composable(route = Settings.route) {
+                                    showBottomNavBar = true
                                     SettingsScreen(onNavigateToSettings = { navController.navigate(it.route) })
                                 }
 
@@ -92,7 +97,8 @@ fun MainTabScreen(rootNavController: NavHostController) {
                                     enterTransition = { slideInHorizontally(initialOffsetX = { -it }) },
                                     exitTransition = { slideOutHorizontally(targetOffsetX = { -it }) }
                                 ) {
-                                    // TODO()
+                                    showBottomNavBar = false
+                                    ProfileSettingsScreen(onNavigateBack = { navController.popBackStack() })
                                 }
                                 
                                 composable(
@@ -100,6 +106,7 @@ fun MainTabScreen(rootNavController: NavHostController) {
                                     enterTransition = { slideInHorizontally(initialOffsetX = { -it }) },
                                     exitTransition = { slideOutHorizontally(targetOffsetX = { -it }) }
                                 ) {
+                                    showBottomNavBar = false
                                     OtherSettingsScreen(onNavigateBack = { navController.popBackStack() })
                                 }
                             }

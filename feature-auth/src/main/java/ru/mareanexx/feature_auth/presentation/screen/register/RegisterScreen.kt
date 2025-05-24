@@ -17,11 +17,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import ru.mareanexx.common.ui.common.components.AuthScreenHeader
+import ru.mareanexx.common.ui.common.components.BirthDateChooser
+import ru.mareanexx.common.ui.common.components.CustomMainButton
 import ru.mareanexx.common.ui.common.components.CustomTextField
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.AuthBottomSuggestionText
-import ru.mareanexx.feature_auth.presentation.components.CustomMainButton
-import ru.mareanexx.feature_auth.presentation.screen.register.components.BirthDateChooser
 import ru.mareanexx.feature_auth.presentation.screen.register.components.RegistrationEventHandler
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.RegisterViewModel
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.state.Field
@@ -108,7 +108,7 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            BirthDateChooser(formState, onOpenDatePicker = { registerViewModel.showDatePickerDialog() })
+            BirthDateChooser(formState.value.birthdate, onOpenDatePicker = { registerViewModel.showDatePickerDialog() })
         }
 
         Column(

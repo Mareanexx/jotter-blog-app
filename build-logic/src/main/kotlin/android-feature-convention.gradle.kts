@@ -29,6 +29,9 @@ dependencies {
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
 
+    // Shimmer
+    implementation(libs.compose.shimmer)
+
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
