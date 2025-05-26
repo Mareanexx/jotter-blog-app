@@ -5,9 +5,10 @@ import javax.inject.Inject
 
 class UserSessionManager @Inject constructor(private val dataStore: DataStore) {
 
-    suspend fun saveSession(token: String, userUuid: UUID) {
+    suspend fun saveSession(token: String, userUuid: UUID, profileId: Int) {
         dataStore.saveToken(token)
         dataStore.saveUserUuid(userUuid)
+        dataStore.saveProfileId(profileId)
     }
 
     suspend fun saveProfileId(profileId: Int) = dataStore.saveProfileId(profileId)

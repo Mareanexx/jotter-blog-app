@@ -20,5 +20,6 @@ include(
     ":core:data",
     ":core:common",
     ":feature-auth",
-    ":feature-settings"
+    ":feature-settings",
+    ":feature-collections"
 )

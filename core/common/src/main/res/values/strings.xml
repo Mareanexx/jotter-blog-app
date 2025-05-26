@@ -19,4 +19,10 @@
     <!--Error Retry-->
     <string name="retry">Retry</string>
     <string name="cant_load_content">Can\'t load content now! Retry now or try again later</string>
+
+    <!--Are you sure Dialog-->
+    <string name="are_you_sure_text">Are you sure you want to delete</string>
+    <string name="delete_btn">Delete</string>
+    <string name="cant_revert_changes">You can\'t revert changes in future</string>
+    <string name="collection_variant_del">this collection?</string>
 </resources>

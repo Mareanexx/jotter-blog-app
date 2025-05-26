@@ -1,11 +1,10 @@
 package ru.mareanexx.jotterblogapp.presentation.navigation
 
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import ru.mareanexx.common.ui.navigation.NavRoute
 import ru.mareanexx.feature_auth.presentation.screen.login.LoginScreen
 import ru.mareanexx.feature_auth.presentation.screen.register.RegisterScreen
@@ -19,8 +18,6 @@ fun AppNavGraph(navHostController: NavHostController) {
     ) {
         composable(
             route = NavRoute.Start.route,
-            enterTransition = { slideInHorizontally(initialOffsetX = { -it }) },
-            exitTransition = { slideOutHorizontally(targetOffsetX = { -it }) }
         ) {
             StartScreen(
                 onNavigateToLoginScreen = { navHostController.navigate(NavRoute.Login.route) },
@@ -32,7 +29,7 @@ fun AppNavGraph(navHostController: NavHostController) {
                 onNavigateToRegisterScreen = { navHostController.navigate(NavRoute.Registration.route) },
                 onNavigateBack = { navHostController.popBackStack() },
                 onNavigateToProfile = {
-                    navHostController.navigate("main") {
+                    navHostController.navigate(NavRoute.Main.route) {
                         popUpTo(0) { inclusive = true }
                     }
                 }
@@ -43,14 +40,15 @@ fun AppNavGraph(navHostController: NavHostController) {
                 onNavigateToLoginScreen = { navHostController.navigate(NavRoute.Login.route) },
                 onNavigateBack = { navHostController.popBackStack() },
                 onNavigateToProfile = {
-                    navHostController.navigate("main") {
+                    navHostController.navigate(NavRoute.Main.route) {
                         popUpTo(0) { inclusive = true }
                     }
                 }
             )
         }
         composable(route = NavRoute.Main.route) {
-            MainTabScreen(navHostController)
+            val bottomNavController = rememberNavController()
+            MainTabScreen(bottomNavController)
         }
     }
 }

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">feature-collections</string>
+    <string name="collections">Collections</string>
+    <string name="collections_header_description">Explore your customized collections.</string>
+    <string name="create_a_collection">Create a collection</string>
+    <string name="articles">articles</string>
+    <string name="article_image">Image of article that belongs to collection</string>
+    <string name="close_sheet_dsc">Close sheet</string>
+    <string name="create_collection_btn">Create collection</string>
+    <string name="tf_label_collection_name">Collection name</string>
+    <string name="tf_desc_enter_collection_name">Enter collection name</string>
+    <string name="error_same_collection_name">Collection with such name already exists</string>
+    <string name="error_too_short_collection_name">Collection name must be at least 3 chars long</string>
+    <string name="empty_string" />
+    <string name="cant_add_collection">Unknown error: can\'t add collection</string>
+    <string name="min_read">min read</string>
+    <string name="remove_from_collection">Remove</string>
+    <string name="rename_collection">Rename collection</string>
+    <string name="delete_collection">Delete collection</string>
+    <string name="update_collection_name_title">Update collection</string>
+    <string name="save_changes_btn">Save Changes</string>
+</resources>
