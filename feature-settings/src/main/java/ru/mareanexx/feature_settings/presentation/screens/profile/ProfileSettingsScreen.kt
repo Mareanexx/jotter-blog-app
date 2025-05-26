@@ -10,12 +10,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import ru.mareanexx.common.ui.common.components.ErrorRetry
+import ru.mareanexx.common.ui.common.components.SmallScreenHeader
 import ru.mareanexx.feature_settings.R
-import ru.mareanexx.feature_settings.presentation.components.ConcreteSettingsHeader
 import ru.mareanexx.feature_settings.presentation.components.ProfileSettingsSkeleton
 import ru.mareanexx.feature_settings.presentation.screens.profile.components.ProfileSettingsEventHandler
 import ru.mareanexx.feature_settings.presentation.screens.profile.components.ProfileSettingsLoadedContent
@@ -37,7 +38,7 @@ fun ProfileSettingsScreen(
 
     Column(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
 
-        ConcreteSettingsHeader(R.string.profile_settings_lbl, onNavigateBack)
+        SmallScreenHeader(stringResource(R.string.profile_settings_lbl), onNavigateBack)
 
         Spacer(Modifier.height(20.dp))
 

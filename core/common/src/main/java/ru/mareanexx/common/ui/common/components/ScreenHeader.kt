@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import ru.mareanexx.core.common.R
 
 @Composable
-fun AuthScreenHeader(
+fun ScreenHeader(
     @StringRes title: Int,
     @StringRes description: Int,
     paddingTop: Dp = 40.dp,

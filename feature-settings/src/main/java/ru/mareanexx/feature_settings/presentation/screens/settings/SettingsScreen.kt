@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ru.mareanexx.common.ui.common.components.AuthScreenHeader
+import ru.mareanexx.common.ui.common.components.ScreenHeader
 import ru.mareanexx.common.ui.common.components.HeaderRowIcons
 import ru.mareanexx.feature_settings.R
 import ru.mareanexx.feature_settings.presentation.screens.settings.components.SettingsListItem
@@ -28,7 +28,7 @@ fun SettingsScreen(onNavigateToSettings: (SettingsRoute) -> Unit) {
             .padding(horizontal = 20.dp)
     ) {
         HeaderRowIcons()
-        AuthScreenHeader(R.string.settings_title, R.string.settings_description, paddingTop = 15.dp)
+        ScreenHeader(R.string.settings_title, R.string.settings_description, paddingTop = 15.dp)
 
         SettingsListItem(
             titleRes = R.string.profile_settings_lbl,

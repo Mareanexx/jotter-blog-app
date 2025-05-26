@@ -16,7 +16,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import ru.mareanexx.common.ui.common.components.AuthScreenHeader
+import ru.mareanexx.common.ui.common.components.ScreenHeader
 import ru.mareanexx.common.ui.common.components.BirthDateChooser
 import ru.mareanexx.common.ui.common.components.CustomMainButton
 import ru.mareanexx.common.ui.common.components.CustomTextField
@@ -52,7 +52,7 @@ fun RegisterScreen(
             .padding(horizontal = 15.dp)
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            AuthScreenHeader(R.string.sign_up_lbl, R.string.sign_up_description, onNavigateBack = onNavigateBack)
+            ScreenHeader(R.string.sign_up_lbl, R.string.sign_up_description, onNavigateBack = onNavigateBack)
 
             CustomTextField(
                 value = formState.value.username,

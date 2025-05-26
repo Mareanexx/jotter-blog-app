@@ -23,6 +23,8 @@ class AppSettingsViewModel @Inject constructor(
     private val _settings = MutableStateFlow(AppSettings())
     val settings: StateFlow<AppSettings> = _settings.asStateFlow()
 
+    init { getSettings() }
+
     fun onThemeChanged(isLight: Boolean) {
         setTheme(isLight)
         _settings.value = _settings.value.copy(themeIsLight = isLight)
@@ -33,7 +35,7 @@ class AppSettingsViewModel @Inject constructor(
         _settings.value = _settings.value.copy(notificationsAreOn = areOn)
     }
 
-    fun getSettings() {
+    private fun getSettings() {
         viewModelScope.launch {
             _settings.value = getSettingsUseCase()
         }

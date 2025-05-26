@@ -16,11 +16,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import ru.mareanexx.common.ui.common.components.AuthScreenHeader
+import ru.mareanexx.common.ui.common.components.CustomMainButton
 import ru.mareanexx.common.ui.common.components.CustomTextField
+import ru.mareanexx.common.ui.common.components.ScreenHeader
 import ru.mareanexx.feature_auth.R
 import ru.mareanexx.feature_auth.presentation.components.AuthBottomSuggestionText
-import ru.mareanexx.common.ui.common.components.CustomMainButton
 import ru.mareanexx.feature_auth.presentation.screen.login.components.LoginEventHandler
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.LoginViewModel
 import ru.mareanexx.feature_auth.presentation.screen.viewmodel.state.LoginUiState
@@ -44,7 +44,7 @@ fun LoginScreen(
             .padding(horizontal = 15.dp)
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            AuthScreenHeader(R.string.log_in_lbl, R.string.log_in_description, onNavigateBack = onNavigateBack)
+            ScreenHeader(R.string.log_in_lbl, R.string.log_in_description, onNavigateBack = onNavigateBack)
 
             CustomTextField(
                 value = formState.value.email,

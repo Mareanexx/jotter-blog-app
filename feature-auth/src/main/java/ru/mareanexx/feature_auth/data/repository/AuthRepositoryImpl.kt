@@ -21,7 +21,7 @@ class AuthRepositoryImpl @Inject constructor(
             val response = authApi.login(loginRequest)
             if (response.isSuccessful) {
                 val data = response.body()!!.data!!
-                userSessionManager.saveSession(data.accessToken, data.userUuid)
+                userSessionManager.saveSession(data.accessToken, data.userUuid, data.profileId)
                 emit(BaseResult.Success(Unit))
             } else {
                 emit(BaseResult.Error(Error(code = response.code(), message = response.body()?.message)))
@@ -34,7 +34,7 @@ class AuthRepositoryImpl @Inject constructor(
             val response = authApi.register(registerRequest)
             if (response.isSuccessful) {
                 val data = response.body()!!.data!!
-                userSessionManager.saveSession(data.accessToken, data.userUuid)
+                userSessionManager.saveSession(data.accessToken, data.userUuid, data.profileId)
                 emit(BaseResult.Success(Unit))
             } else {
                 emit(BaseResult.Error(Error(code = response.code(), message = response.body()?.message)))
