@@ -10,6 +10,7 @@ dependencies {
     implementation(project(":feature-auth"))
     implementation(project(":feature-settings"))
     implementation(project(":feature-collections"))
+    implementation(project(":feature-articles"))
 
     ksp(libs.androidx.room.compiler)
     ksp(libs.hilt.compiler)

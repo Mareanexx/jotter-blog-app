@@ -25,7 +25,11 @@ import ru.mareanexx.common.ui.theme.Shapes
 import ru.mareanexx.core.common.R
 
 @Composable
-fun BottomNavBar(selectedTab: Tabs, onTabSelected: (Tabs) -> Unit) {
+fun BottomNavBar(
+    selectedTab: Tabs,
+    onTabSelected: (Tabs) -> Unit,
+    onAddArticleButtonClicked: () -> Unit
+) {
     Box(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.fillMaxWidth()
@@ -61,7 +65,7 @@ fun BottomNavBar(selectedTab: Tabs, onTabSelected: (Tabs) -> Unit) {
                 navigateTo = { onTabSelected(Tabs.Settings) }
             )
         }
-        AddArticleButton(alignModifier = Modifier.align(Alignment.TopCenter), onAddArticle = {  })
+        AddArticleButton(alignModifier = Modifier.align(Alignment.TopCenter), onAddArticle = onAddArticleButtonClicked)
     }
 }
 
@@ -90,6 +94,7 @@ fun Modifier.addBlueShadow() = shadow(elevation = 10.dp, shape = Shapes.extraLar
 fun PreviewBottomNavBar() {
     BottomNavBar(
         selectedTab = Tabs.Home,
-        onTabSelected = {  }
+        onTabSelected = {  },
+        onAddArticleButtonClicked = {  }
     )
 }

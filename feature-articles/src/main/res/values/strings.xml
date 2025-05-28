@@ -1,0 +1,30 @@
+<resources>
+    <!--Common-->
+    <string name="of">OF</string>
+    <string name="empty_string" />
+
+    <!--Create Article-->
+    <string name="create_article_label">Create article</string>
+    <string name="tf_article_name_label">Let\'s think of something great for your article name</string>
+    <string name="tf_article_name_placeholder">Enter article name</string>
+    <string name="tf_categories_label">Let\'s give your article some categories</string>
+    <string name="tf_categories_placeholder">Enter to search categories</string>
+    <string name="photo_chooser_label">Wisely choose the main image for your article</string>
+    <string name="error_no_categories_selected">You must choose at least 1 category</string>
+    <string name="error_article_name_too_short">Article name must be at least 3 chars long</string>
+    <string name="error_loading_categories">Can\\\'t load categories now</string>
+    <string name="upload_main_cover_photo">Upload Cover Image</string>
+    <string name="image_size_requirements">Size must be \u2264 5MB></string>
+    <string name="reload_cover_image">Reload image</string>
+    <string name="next_step_btn">Next step</string>
+
+    <!--Add Article Content-->
+    <string name="add_content_title">Add article content</string>
+    <string name="start_typing_here_placeholder">Start Typing Here…</string>
+    <string name="cd_action_set_bold_text_style">Set bold text style</string>
+    <string name="cd_action_set_italic_text_style">Set italic text style</string>
+    <string name="cd_action_set_underlined_text_style">Set underlined text style</string>
+    <string name="cd_action_set_strikethrough_text_style">Set strikethrough text style</string>
+    <string name="successfully_added_new_article">New article was successfully added. It was saved to \"my\" collection</string>
+    <string name="error_article_content">Article content must be at least three words</string>
+</resources>

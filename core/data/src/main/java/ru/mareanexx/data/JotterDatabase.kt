@@ -6,6 +6,10 @@ import ru.mareanexx.data.articles.dao.AuthorArticleDao
 import ru.mareanexx.data.articles.dao.OthersArticleDao
 import ru.mareanexx.data.articles.entity.AuthorArticleEntity
 import ru.mareanexx.data.articles.entity.OthersArticleEntity
+import ru.mareanexx.data.category.dao.CategoryArticlesDao
+import ru.mareanexx.data.category.dao.CategoryDao
+import ru.mareanexx.data.category.entity.CategoryArticlesEntity
+import ru.mareanexx.data.category.entity.CategoryEntity
 import ru.mareanexx.data.collections.dao.CollectionArticlesDao
 import ru.mareanexx.data.collections.dao.CollectionsDao
 import ru.mareanexx.data.collections.entity.CollectionArticlesEntity
@@ -19,7 +23,9 @@ import ru.mareanexx.data.profile.entity.ProfileEntity
         AuthorArticleEntity::class,
         CollectionEntity::class,
         OthersArticleEntity::class,
-        CollectionArticlesEntity::class
+        CollectionArticlesEntity::class,
+        CategoryEntity::class,
+        CategoryArticlesEntity::class
     ],
     version = 1,
     exportSchema = false
@@ -30,4 +36,6 @@ abstract class JotterDatabase : RoomDatabase() {
     abstract fun othersArticleDao(): OthersArticleDao
     abstract fun collectionsDao(): CollectionsDao
     abstract fun collectionArticlesDao(): CollectionArticlesDao
+    abstract fun categoryDao(): CategoryDao
+    abstract fun categoryArticlesDao(): CategoryArticlesDao
 }

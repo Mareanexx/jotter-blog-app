@@ -10,6 +10,8 @@ import dagger.hilt.components.SingletonComponent
 import ru.mareanexx.data.JotterDatabase
 import ru.mareanexx.data.articles.dao.AuthorArticleDao
 import ru.mareanexx.data.articles.dao.OthersArticleDao
+import ru.mareanexx.data.category.dao.CategoryArticlesDao
+import ru.mareanexx.data.category.dao.CategoryDao
 import ru.mareanexx.data.collections.dao.CollectionArticlesDao
 import ru.mareanexx.data.collections.dao.CollectionsDao
 import ru.mareanexx.data.profile.dao.ProfileDao
@@ -51,5 +53,15 @@ object DatabaseModule {
     @Provides
     fun provideCollectionArticlesDao(db: JotterDatabase): CollectionArticlesDao {
         return db.collectionArticlesDao()
+    }
+
+    @Provides
+    fun provideCategoryDao(db: JotterDatabase): CategoryDao {
+        return db.categoryDao()
+    }
+
+    @Provides
+    fun provideCategoryArticlesDao(db: JotterDatabase): CategoryArticlesDao {
+        return db.categoryArticlesDao()
     }
 }

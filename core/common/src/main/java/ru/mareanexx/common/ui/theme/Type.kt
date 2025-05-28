@@ -4,6 +4,7 @@ import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import ru.mareanexx.core.common.R
@@ -11,7 +12,9 @@ import ru.mareanexx.core.common.R
 
 val ProductSansFamily = FontFamily(
     Font(R.font.product_sans_reg, FontWeight.Normal),
-    Font(R.font.product_sans_bold, FontWeight.Bold)
+    Font(R.font.product_sans_bold, FontWeight.Bold),
+    Font(R.font.product_sans_bold_italic, FontWeight.Bold, FontStyle.Italic),
+    Font(R.font.product_sans_italic, FontWeight.Normal, FontStyle.Italic)
 )
 
 val Typography = Typography(

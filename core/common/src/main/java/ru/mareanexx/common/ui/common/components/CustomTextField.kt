@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.BasicTextField
@@ -42,9 +43,9 @@ fun CustomTextField(
     onValueChanged: (String) -> Unit,
     @StringRes label: Int,
     @StringRes placeholder: Int,
-    @DrawableRes icon: Int,
+    @DrawableRes icon: Int? = null,
     isPassword: Boolean = false,
-    isError: Boolean = true,
+    isError: Boolean = false,
     @StringRes errorRes: Int,
     keyboardType: KeyboardType, imeAction: ImeAction
 ) {
@@ -57,6 +58,7 @@ fun CustomTextField(
         )
         Row(
             modifier = Modifier.fillMaxWidth()
+                .heightIn(min = 50.dp)
                 .background(
                     color = if (!isError) LightGray.copy(alpha = 0.15f) else MaterialTheme.colorScheme.error,
                     shape = Shapes.medium
@@ -65,12 +67,14 @@ fun CustomTextField(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Icon(
-                modifier = Modifier.size(30.dp),
-                painter = painterResource(icon),
-                tint = if (!isError) MaterialTheme.colorScheme.surfaceBright else MaterialTheme.colorScheme.onError,
-                contentDescription = stringResource(placeholder)
-            )
+            icon?.let {
+                Icon(
+                    modifier = Modifier.size(30.dp),
+                    painter = painterResource(it),
+                    tint = if (!isError) MaterialTheme.colorScheme.surfaceBright else MaterialTheme.colorScheme.onError,
+                    contentDescription = stringResource(placeholder)
+                )
+            }
             BasicTextField(
                 value = value,
                 onValueChange = onValueChanged,
