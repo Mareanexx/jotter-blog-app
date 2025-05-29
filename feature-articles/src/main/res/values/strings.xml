@@ -27,4 +27,6 @@
     <string name="cd_action_set_strikethrough_text_style">Set strikethrough text style</string>
     <string name="successfully_added_new_article">New article was successfully added. It was saved to \"my\" collection</string>
     <string name="error_article_content">Article content must be at least three words</string>
+    <string name="discover_title">Discover</string>
+    <string name="min_read">min read</string>
 </resources>

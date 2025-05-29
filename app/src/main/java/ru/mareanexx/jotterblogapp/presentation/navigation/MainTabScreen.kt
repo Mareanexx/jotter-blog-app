@@ -30,6 +30,8 @@ import ru.mareanexx.feature_articles.presentation.screens.create_article.AddArti
 import ru.mareanexx.feature_articles.presentation.screens.create_article.CreateArticleRoute
 import ru.mareanexx.feature_articles.presentation.screens.create_article.CreateArticleScreen
 import ru.mareanexx.feature_articles.presentation.screens.create_article.viewmodel.CreateArticleViewModel
+import ru.mareanexx.feature_articles.presentation.screens.discover.DiscoverRoute
+import ru.mareanexx.feature_articles.presentation.screens.discover.DiscoverScreen
 import ru.mareanexx.feature_collections.presentation.screens.collection.ConcreteCollectionScreen
 import ru.mareanexx.feature_collections.presentation.screens.list.CollectionsRoute
 import ru.mareanexx.feature_collections.presentation.screens.list.CollectionsScreen
@@ -78,7 +80,13 @@ fun MainTabScreen(navController: NavHostController) {
             modifier = Modifier.padding(innerPadding).fillMaxSize()
         ) {
             composable(Home.route) {
-                // HomeScreen()
+                DiscoverScreen(
+                    onNavigateToSearchScreen = { navController.navigate(DiscoverRoute.Search.route) }
+                )
+            }
+
+            composable(DiscoverRoute.Search.route) {
+                // TODO()
             }
 
             navigation(

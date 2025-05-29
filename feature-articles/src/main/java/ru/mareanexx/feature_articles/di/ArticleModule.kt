@@ -8,6 +8,8 @@ import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import ru.mareanexx.common.network.tracker.NetworkMonitor
 import ru.mareanexx.data.articles.dao.AuthorArticleDao
+import ru.mareanexx.data.articles.dao.OthersArticleDao
+import ru.mareanexx.data.category.dao.CategoryArticlesDao
 import ru.mareanexx.data.category.dao.CategoryDao
 import ru.mareanexx.feature_articles.data.remote.api.ArticleApi
 import ru.mareanexx.feature_articles.data.remote.api.CategoryApi
@@ -25,9 +27,17 @@ object ArticleModule {
     fun provideArticleRepository(
         gson: Gson,
         articleApi: ArticleApi,
-        authorArticleDao: AuthorArticleDao
+        authorArticleDao: AuthorArticleDao,
+        othersArticleDao: OthersArticleDao,
+        categoryDao: CategoryDao,
+        categoryArticlesDao: CategoryArticlesDao
     ): ArticleRepository {
-        return ArticleRepositoryImpl(gson, articleApi, authorArticleDao)
+        return ArticleRepositoryImpl(
+            gson, articleApi, authorArticleDao,
+            othersArticleDao = othersArticleDao,
+            categoryDao = categoryDao,
+            categoryArticlesDao = categoryArticlesDao
+        )
     }
 
     @Singleton

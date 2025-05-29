@@ -67,7 +67,7 @@ fun CollectionArticleCard(collectionArticle: CollectionArticle, onRemoveFromColl
                 maxLines = 2, overflow = TextOverflow.Ellipsis
             )
             Text(
-                text = "${collectionArticle.createdAt.format(DateFormatter.articleCreationDateFormatter)} - ${collectionArticle.readTimeSeconds} ${stringResource(R.string.min_read)}",
+                text = "${collectionArticle.createdAt.format(DateFormatter.articleDateFormatter)} - ${collectionArticle.readTimeSeconds} ${stringResource(R.string.min_read)}",
                 style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 1
             )

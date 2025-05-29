@@ -1,0 +1,17 @@
+package ru.mareanexx.feature_articles.domain.usecase
+
+import kotlinx.coroutines.flow.Flow
+import ru.mareanexx.common.data.remote.common.BaseResult
+import ru.mareanexx.common.data.remote.common.Error
+import ru.mareanexx.feature_articles.data.remote.dto.Category
+import ru.mareanexx.feature_articles.data.remote.dto.CategoryArticles
+import ru.mareanexx.feature_articles.domain.ArticleRepository
+import javax.inject.Inject
+
+class GetArticlesByCategoryUseCase @Inject constructor(
+    private val articleRepository: ArticleRepository
+) {
+    suspend operator fun invoke(category: Category): Flow<BaseResult<CategoryArticles, Error>> {
+        return articleRepository.get(category)
+    }
+}

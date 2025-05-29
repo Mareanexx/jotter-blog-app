@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
-import ru.mareanexx.data.articles.entity.AuthorArticleEntity
 
 @Entity(
     tableName = "category_articles",
@@ -12,16 +11,13 @@ import ru.mareanexx.data.articles.entity.AuthorArticleEntity
         ForeignKey(
             entity = CategoryEntity::class,
             parentColumns = ["id"],
-            childColumns = ["category_id"]
-        ),
-        ForeignKey(
-            entity = AuthorArticleEntity::class,
-            parentColumns = ["id"],
-            childColumns = ["article_id"]
+            childColumns = ["category_id"],
+            onUpdate = ForeignKey.CASCADE,
+            onDelete = ForeignKey.CASCADE
         )
     ],
     primaryKeys = ["category_id", "article_id"],
-    indices = [Index(value = ["category_id"]), Index(value = ["article_id"])]
+    indices = [Index(value = ["category_id"])]
 )
 data class CategoryArticlesEntity(
     @ColumnInfo(name = "category_id")

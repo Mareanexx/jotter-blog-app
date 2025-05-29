@@ -52,18 +52,21 @@ fun ScreenHeader(
 
 @Composable
 fun HeaderRowIcons(
-    onSearchClicked: () -> Unit = {}
+    onSearchClicked: () -> Unit = {},
+    bottomPadding: Dp = 10.dp,
+    middleText: @Composable () -> Unit = {}
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(top = 20.dp, bottom = 10.dp),
+        modifier = Modifier.fillMaxWidth().padding(top = 20.dp, bottom = bottomPadding),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            modifier = Modifier.size(28.dp),
+            modifier = Modifier.size(26.dp),
             painter = painterResource(R.drawable.jotter_light_theme_icon),
             contentDescription = null,
         )
+        middleText()
         Icon(
             modifier = Modifier.size(28.dp)
                 .clickable(

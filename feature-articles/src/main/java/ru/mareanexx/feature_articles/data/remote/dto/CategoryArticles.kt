@@ -1,10 +1,14 @@
-package ru.mareanexx.feature_articles.domain.entity
+package ru.mareanexx.feature_articles.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
-import ru.mareanexx.feature_articles.data.remote.dto.Category
 import java.time.OffsetDateTime
 
-data class Article(
+data class CategoryArticles(
+    val category: Category,
+    val articles: List<DiscoverArticle>
+)
+
+data class DiscoverArticle(
     val id: Int,
     val title: String,
     val content: String,
@@ -16,6 +20,5 @@ data class Article(
     @SerializedName(value = "profile_id")
     val profileId: Int,
     @SerializedName(value = "is_published")
-    val isPublished: Boolean,
-    val categories: List<Category>
+    val isPublished: Boolean
 )
